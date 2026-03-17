@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dalam World — The game of your childhood, reborn</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Dalam World — seamless fantasy world, nostalgia + modern mechanics, 500,000+ players in one world without lags."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel='shortcut icon' href='https://play.dalam.world/favicon.ico'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<script defer src="https://mpwmp.dkon.app/pixel/GxRA8y1uTZfCh9iP"></script>
+  <style>
+    :root {
+      --bg: #0a0015;
+      --accent: #ff2e63;
+      --gold: #ffd700;
+      --glass: rgba(20, 20, 60, 0.25);
+      --border: rgba(255, 46, 99, 0.3);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: var(--bg);
+      color: #f0efff;
+      overflow-x: hidden;
+      background-image: radial-gradient(circle at 20% 30%, rgba(100,0,200,0.08), transparent 40%);
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      min-height: 800px;
+      background: linear-gradient(to bottom, rgba(10,0,30,0.4), rgba(10,0,30,0.85)),
+                  url('https://filecloud-63-ars-cont-st.dkon.app/wp-cont/cloud63/Dkon.APP_normal_7d515bc.png') center / cover fixed no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+    }
+    .hero-content {
+      max-width: 1300px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(60px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(5rem, 12vw, 11rem);
+      color: var(--gold);
+      text-shadow: 0 0 60px rgba(255,215,0,0.7), 0 0 120px rgba(255,46,99,0.4);
+      letter-spacing: 8px;
+      margin-bottom: 0.8rem;
+      line-height: 0.9;
+    }
+    .tagline {
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: #d0c8ff;
+      margin: 1rem 0 2.5rem;
+      text-shadow: 0 0 30px rgba(208,200,255,0.5);
+    }
+    .highlight { color: var(--accent); font-weight: 600; }
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      z-index: 10;
+    }
+    .lang-switcher select {
+      background: rgba(20,20,60,0.7);
+      color: #ffd700;
+      border: 1px solid #ff2e63;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .countdown {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .countdown-card {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 2.2rem;
+      min-width: 140px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .countdown-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(255,46,99,0.3);
+    }
+    .countdown-value {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.2rem;
+      color: var(--gold);
+      text-shadow: 0 0 25px rgba(255,215,0,0.8);
+    }
+    .countdown-label {
+      font-size: 1.1rem;
+      color: #aaaaff;
+      margin-top: 0.5rem;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    .btn {
+      padding: 1.2rem 3.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+   /* .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: 0.6s;
+    }
+    .btn:hover::before { left: 100%; }*/
+    .btn-primary {
+      background: linear-gradient(135deg, #ff2e63, #ff6b6b);
+      color: white;
+      box-shadow: 0 10px 30px rgba(255,46,99,0.4);
+    }
+    .btn-primary:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 50px rgba(255,46,99,0.6);
+    }
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: rgba(255,215,0,0.1);
+      transform: scale(1.05);
+    }
+    section {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+    .feature-card {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.5s;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+    .feature-card:nth-child(1) { animation-delay: 0.2s; }
+    .feature-card:nth-child(2) { animation-delay: 0.4s; }
+    .feature-card:nth-child(3) { animation-delay: 0.6s; }
+    .feature-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 60px rgba(255,46,99,0.25);
+    }
+    .feature-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(255,46,99,0.5);
+    }
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 40px rgba(255,215,0,0.5);
+    }
+    .online {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 2rem 0;
+      color: #aaffaa;
+    }
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to top, #0a0015, transparent);
+      color: #8888aa;
+      font-size: 1rem;
+    }
+    @media (max-width: 900px) {
+      h1 { font-size: 6rem; }
+      .tagline { font-size: 2.2rem; }
+      .countdown { gap: 1rem; }
+      .countdown-card { min-width: 110px; padding: 1.2rem 1.8rem; }
+      .countdown-value { font-size: 2.4rem; }
+      .lang-switcher { top: 15px; right: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switcher">
+  <select id="langSelect">
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+    <option value="el">Ελληνικά</option>
+    <option value="pt">Português (BR)</option>
+    <option value="hi">हिन्दी</option>
+    <option value="pl">Polski</option>
+    <option value="de">Deutsch</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="zh">中文 (简体)</option>
+    <option value="zh-tw">繁體中文 (台灣)</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="fr">Français</option>
+    <option value="tl">Filipino</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="ar">العربية</option>
+    <option value="ur">اردو</option>
+    <option value="th">ภาษาไทย</option>
+    <option value="tr">Türkçe</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+    <option value="ms">Bahasa Melayu</option>
+    <option value="ro">Română</option>
+    <option value="bg">Български</option>
+    <option value="cs">Čeština</option>
+    <option value="nl">Nederlands</option>
+    <option value="sv">Svenska</option>
+  </select>
+</div>
+
+  <header>
+    <div class="hero-content">
+      <h1 id="title">DALAM WORLD</h1>
+      <div class="tagline" id="tagline">
+        <span class="highlight" id="highlight">The game of your childhood</span><br>
+        <span id="slogan">Nostalgia + modern mechanics</span>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown-card"><div class="countdown-value" id="days">0</div><div class="countdown-label" data-key="days">Days</div></div>
+        <div class="countdown-card"><div class="countdown-value" id="hours">00</div><div class="countdown-label" data-key="hours">Hours</div></div>
+        <div class="countdown-card"><div class="countdown-value" id="minutes">00</div><div class="countdown-label" data-key="minutes">Minutes</div></div>
+        <div class="countdown-card"><div class="countdown-value" id="seconds">00</div><div class="countdown-label" data-key="seconds">Seconds</div></div>
+      </div>
+
+      <div class="online" style="visibility: hidden" id="online">Online now: <span id="total-online" style="color:#ffd700; font-weight:bold;">—</span> heroes in the world</div>
+
+      <div class="buttons">
+        <a href="https://dalam.world/" class="btn btn-primary" id="registerBtn">Register</a>
+        <a href="https://dalam.world/#modal-downloads" class="btn btn-outline" id="downloadBtn">Download Launcher</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2 id="whyTitle">Why Dalam World is the future of MMORPG</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌌</div>
+        <h3 id="feat1Title">Huge seamless world</h3>
+        <p id="feat1Text">Multiple continents, thousands of players in one open world — no zones, no loading screens, no lags.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 id="feat2Title">500,000+ simultaneously</h3>
+        <p id="feat2Text">Unique client supports over half a million people in one place — no queues ever.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💻</div>
+        <h3 id="feat3Title">Runs on everything</h3>
+        <p id="feat3Text">Super optimized: old PC from 2010s, bad internet — game starts and flies smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align:center; padding:120px 5% 80px;">
+    <h2 id="readyTitle" style="font-size:3.5rem;">Ready to return… but stronger?</h2>
+    <p id="readyText" style="font-size:1.4rem; max-width:800px; margin:2rem auto; color:#d0c8ff;">
+      July 16, 2026 — the start of a new era. Join the legend.
+    </p>
+    <a href="https://dalam.world/" class="btn btn-primary" style="font-size:1.7rem; padding:1.4rem 4.5rem; margin-top:2rem;" id="enterBtn">
+      Dalam.World — Enter!
+    </a>
+  </section>
+
+  <footer id="footer">
+    © 2026 Dalam World •  
+    All rights reserved. Nostalgia meets the future.
+  </footer>
+
+  <script>
+    // Translations object
+    const translations = {
+      en: {
+        title: "DALAM WORLD",
+        highlight: "The game of your childhood",
+        slogan: "Nostalgia + modern mechanics",
+        days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds",
+        online: "Online now: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> heroes in the world",
+        registerBtn: "Register",
+        downloadBtn: "Download Launcher",
+        whyTitle: "Why Dalam World is the future of MMORPG",
+        feat1Title: "Huge seamless world",
+        feat1Text: "Multiple continents, thousands of players in one open world — no zones, no loading screens, no lags.",
+        feat2Title: "500,000+ simultaneously",
+        feat2Text: "Unique client supports over half a million people in one place — no queues ever.",
+        feat3Title: "Runs on everything",
+        feat3Text: "Super optimized: old PC from 2010s, bad internet — game starts and flies smoothly.",
+        readyTitle: "Ready to return… but stronger?",
+        readyText: "July 16, 2026 — the start of a new era. Join the legend.",
+        enterBtn: "Dalam.World — Enter!",
+        footer: "© 2026 Dalam World • All rights reserved. Nostalgia meets the future."
+      },
+      ru: {
+        title: "DALAM WORLD",
+        highlight: "Та самая игра детства",
+        slogan: "Ностальгия + современные механики",
+        days: "Дней", hours: "Часов", minutes: "Минут", seconds: "Секунд",
+        online: "Онлайн сейчас: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+        registerBtn: "Зарегистрироваться",
+        downloadBtn: "Скачать лаунчер",
+        whyTitle: "Почему Dalam World — это будущее MMORPG",
+        feat1Title: "Огромный бесшовный мир",
+        feat1Text: "Несколько материков, тысячи игроков в одном открытом мире — без зон, без загрузок, без лагов.",
+        feat2Title: "500 000+ одновременно",
+        feat2Text: "Уникальный клиент выдерживает более полумиллиона человек в одном месте — никаких очередей.",
+        feat3Title: "Идёт на всём",
+        feat3Text: "Сверхоптимизировано: слабый ПК 2010-х, плохой интернет — игра запускается и летает.",
+        readyTitle: "Готов вернуться… но мощнее?",
+        readyText: "16 июля 2026 — старт новой эры. Присоединяйся к легенде.",
+        enterBtn: "Dalam.World — Входи!",
+        footer: "© 2026 Dalam World • Все права защищены. Ностальгия встречает будущее."
+      },
+        
+        
+        el: {  // Греческий
+    title: "DALAM WORLD",
+    highlight: "Το παιχνίδι της παιδικής σου ηλικίας",
+    slogan: "Νοσταλγία + σύγχρονοι μηχανισμοί",
+    days: "Ημέρες", hours: "Ώρες", minutes: "Λεπτά", seconds: "Δευτερόλεπτα",
+    online: "Συνδεδεμένοι τώρα: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ήρωες στον κόσμο",
+    registerBtn: "Εγγραφή",
+    downloadBtn: "Λήψη Εκκίνησης",
+    whyTitle: "Γιατί το Dalam World είναι το μέλλον των MMORPG",
+    feat1Title: "Τεράστιος συνεχής κόσμος",
+    feat1Text: "Πολλαπλές ήπειροι, χιλιάδες παίκτες σε έναν ενιαίο ανοιχτό κόσμο — χωρίς ζώνες, χωρίς φορτώσεις, χωρίς lags.",
+    feat2Title: "500.000+ ταυτόχρονα",
+    feat2Text: "Μοναδικός client αντέχει πάνω από μισό εκατομμύριο παίκτες σε ένα μέρος — χωρίς ουρές ποτέ.",
+    feat3Title: "Τρέχει σε όλα",
+    feat3Text: "Υπερ-βελτιστοποιημένο: παλιός υπολογιστής από τα 2010s, κακό internet — το παιχνίδι ξεκινά και πετάει ομαλά.",
+    readyTitle: "Έτοιμος να επιστρέψεις… αλλά πιο δυνατός;",
+    readyText: "16 Ιουλίου 2026 — η αρχή μιας νέας εποχής. Γίνε μέρος του θρύλου.",
+    enterBtn: "Dalam.World — Είσοδος!",
+    footer: "© 2026 Dalam World •  Όλα τα δικαιώματα διατηρούνται. Η νοσταλγία συναντά το μέλλον."
+  },
+
+  pt: {  // Португальский (Бразилия)
+    title: "DALAM WORLD",
+    highlight: "O jogo da sua infância",
+    slogan: "Nostalgia + mecânicas modernas",
+    days: "Dias", hours: "Horas", minutes: "Minutos", seconds: "Segundos",
+    online: "Online agora: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> heróis no mundo",
+    registerBtn: "Registrar",
+    downloadBtn: "Baixar Launcher",
+    whyTitle: "Por que Dalam World é o futuro dos MMORPG",
+    feat1Title: "Mundo seamless gigantesco",
+    feat1Text: "Vários continentes, milhares de jogadores em um único mundo aberto — sem zonas, sem telas de loading, sem lags.",
+    feat2Title: "500.000+ simultaneamente",
+    feat2Text: "Cliente único suporta mais de meio milhão de pessoas no mesmo lugar — sem filas nunca.",
+    feat3Title: "Roda em tudo",
+    feat3Text: "Super otimizado: PC antigo dos anos 2010, internet ruim — o jogo inicia e voa suave.",
+    readyTitle: "Pronto para voltar… mas mais forte?",
+    readyText: "16 de julho de 2026 — o início de uma nova era. Junte-se à lenda.",
+    enterBtn: "Dalam.World — Entre!",
+    footer: "© 2026 Dalam World •  Todos os direitos reservados. Nostalgia encontra o futuro."
+  },
+
+  hi: {  // Хинди (с игровыми терминами)
+    title: "DALAM WORLD",
+    highlight: "आपके बचपन का खेल",
+    slogan: "नॉस्टैल्जिया + आधुनिक मैकेनिक्स",
+    days: "दिन", hours: "घंटे", minutes: "मिनट", seconds: "सेकंड",
+    online: "अभी ऑनलाइन: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> हीरो विश्व में",
+    registerBtn: "रजिस्टर करें",
+    downloadBtn: "लॉन्चर डाउनलोड करें",
+    whyTitle: "दलम वर्ल्ड MMORPG का भविष्य क्यों है",
+    feat1Title: "विशाल सीमलेस दुनिया",
+    feat1Text: "कई महाद्वीप, हजारों खिलाड़ी एक ही ओपन वर्ल्ड में — कोई ज़ोन नहीं, कोई लोडिंग स्क्रीन नहीं, कोई लैग नहीं।",
+    feat2Title: "500,000+ एक साथ",
+    feat2Text: "यूनिक क्लाइंट आधे मिलियन से ज्यादा लोगों को एक जगह सपोर्ट करता है — कभी कतार नहीं।",
+    feat3Title: "सब कुछ पर चलता है",
+    feat3Text: "सुपर ऑप्टिमाइज़्ड: 2010 के पुराने पीसी, खराब इंटरनेट — गेम शुरू होता है और स्मूद उड़ता है।",
+    readyTitle: "वापस आने के लिए तैयार… लेकिन और मजबूत?",
+    readyText: "16 जुलाई 2026 — नई युग की शुरुआत। लेजेंड में शामिल हों।",
+    enterBtn: "Dalam.World — प्रवेश करें!",
+    footer: "© 2026 Dalam World •  सभी अधिकार सुरक्षित। नॉस्टैल्जिया भविष्य से मिलता है।"
+  },
+
+  pl: {  // Польский
+    title: "DALAM WORLD",
+    highlight: "Gra z twojego dzieciństwa",
+    slogan: "Nostalgia + nowoczesne mechaniki",
+    days: "Dni", hours: "Godziny", minutes: "Minuty", seconds: "Sekundy",
+    online: "Online teraz: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> bohaterów w świecie",
+    registerBtn: "Zarejestruj się",
+    downloadBtn: "Pobierz Launcher",
+    whyTitle: "Dlaczego Dalam World to przyszłość MMORPG",
+    feat1Title: "Ogromny seamless świat",
+    feat1Text: "Kilka kontynentów, tysiące graczy w jednym otwartym świecie — bez stref, bez ekranów ładowania, bez lagów.",
+    feat2Title: "500 000+ jednocześnie",
+    feat2Text: "Unikalny klient wytrzymuje ponad pół miliona osób w jednym miejscu — nigdy żadnych kolejek.",
+    feat3Title: "Działa na wszystkim",
+    feat3Text: "Super zoptymalizowany: stary PC z lat 2010., słaby internet — gra startuje i śmiga płynnie.",
+    readyTitle: "Gotowy wrócić… ale mocniej?",
+    readyText: "16 lipca 2026 — początek nowej ery. Dołącz do legendy.",
+    enterBtn: "Dalam.World — Wejdź!",
+    footer: "© 2026 Dalam World •  Wszystkie prawa zastrzeżone. Nostalgia spotyka przyszłość."
+  },
+
+  de: {  // Немецкий
+    title: "DALAM WORLD",
+    highlight: "Das Spiel deiner Kindheit",
+    slogan: "Nostalgie + moderne Mechaniken",
+    days: "Tage", hours: "Stunden", minutes: "Minuten", seconds: "Sekunden",
+    online: "Online jetzt: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> Helden in der Welt",
+    registerBtn: "Registrieren",
+    downloadBtn: "Launcher herunterladen",
+    whyTitle: "Warum Dalam World die Zukunft der MMORPGs ist",
+    feat1Title: "Riesige nahtlose Welt",
+    feat1Text: "Mehrere Kontinente, Tausende Spieler in einer einzigen offenen Welt — keine Zonen, keine Ladebildschirme, keine Lags.",
+    feat2Title: "500.000+ gleichzeitig",
+    feat2Text: "Einzigartiger Client unterstützt über eine halbe Million Menschen an einem Ort — nie Warteschlangen.",
+    feat3Title: "Läuft auf allem",
+    feat3Text: "Super optimiert: alter PC aus den 2010ern, schlechtes Internet — Spiel startet und läuft butterweich.",
+    readyTitle: "Bereit zurückzukehren… aber stärker?",
+    readyText: "16. Juli 2026 — Beginn einer neuen Ära. Werde Teil der Legende.",
+    enterBtn: "Dalam.World — Eintreten!",
+    footer: "© 2026 Dalam World •  Alle Rechte vorbehalten. Nostalgie trifft auf die Zukunft."
+  },
+
+  id: {  // Индонезийский
+    title: "DALAM WORLD",
+    highlight: "Permainan masa kecilmu",
+    slogan: "Nostalgia + mekanik modern",
+    days: "Hari", hours: "Jam", minutes: "Menit", seconds: "Detik",
+    online: "Online sekarang: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> pahlawan di dunia",
+    registerBtn: "Daftar",
+    downloadBtn: "Unduh Launcher",
+    whyTitle: "Mengapa Dalam World adalah masa depan MMORPG",
+    feat1Title: "Dunia seamless raksasa",
+    feat1Text: "Beberapa benua, ribuan pemain dalam satu dunia terbuka — tanpa zona, tanpa layar loading, tanpa lag.",
+    feat2Title: "500.000+ secara bersamaan",
+    feat2Text: "Klien unik mendukung lebih dari setengah juta orang di satu tempat — tanpa antrean pernah.",
+    feat3Title: "Berjalan di segalanya",
+    feat3Text: "Super dioptimalkan: PC lama dari 2010-an, internet buruk — game mulai dan berjalan mulus.",
+    readyTitle: "Siap kembali… tapi lebih kuat?",
+    readyText: "16 Juli 2026 — awal era baru. Bergabunglah dengan legenda.",
+    enterBtn: "Dalam.World — Masuk!",
+    footer: "© 2026 Dalam World •  Hak cipta dilindungi. Nostalgia bertemu masa depan."
+  },
+
+  zh: {  // Китайский (упрощённый)
+    title: "DALAM WORLD",
+    highlight: "你童年的游戏",
+    slogan: "怀旧 + 现代机制",
+    days: "天", hours: "小时", minutes: "分钟", seconds: "秒",
+    online: "当前在线: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> 名英雄在世界中",
+    registerBtn: "注册",
+    downloadBtn: "下载启动器",
+    whyTitle: "为什么 Dalam World 是 MMORPG 的未来",
+    feat1Title: "巨大的无缝世界",
+    feat1Text: "多个大陆，成千上万玩家在一个开放世界中 — 无区域、无加载画面、无延迟。",
+    feat2Title: "50万+ 同时在线",
+    feat2Text: "独特客户端支持超过50万人同时在一个地方 — 永无排队。",
+    feat3Title: "在任何设备上运行",
+    feat3Text: "超级优化：2010年代的老电脑、差的网络 — 游戏启动并流畅运行。",
+    readyTitle: "准备回归…但更强大？",
+    readyText: "2026年7月16日 — 新时代的开始。加入传奇。",
+    enterBtn: "Dalam.World — 进入！",
+    footer: "© 2026 Dalam World •  保留所有权利。怀旧遇见未来。"
+  },
+
+  ja: {  // Японский
+    title: "DALAM WORLD",
+    highlight: "君の子供時代のゲーム",
+    slogan: "ノスタルジー + 現代メカニクス",
+    days: "日", hours: "時間", minutes: "分", seconds: "秒",
+    online: "現在オンライン: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> 人の英雄が世界に",
+    registerBtn: "登録",
+    downloadBtn: "ランチャーをダウンロード",
+    whyTitle: "なぜ Dalam World が MMORPG の未来なのか",
+    feat1Title: "巨大なシームレスワールド",
+    feat1Text: "複数の大陸、数千人のプレイヤーが一つのオープンワールドに — ゾーンなし、ロード画面なし、ラグなし。",
+    feat2Title: "50万以上同時接続",
+    feat2Text: "独自クライアントが50万人以上を一箇所でサポート — 待ち行列なし。",
+    feat3Title: "何でも動く",
+    feat3Text: "超最適化：2010年代の古いPC、悪いネット — ゲームが起動してスムーズに飛ぶ。",
+    readyTitle: "帰ってくる準備は…もっと強く？",
+    readyText: "2026年7月16日 — 新時代の始まり。伝説に加われ。",
+    enterBtn: "Dalam.World — 入る！",
+    footer: "© 2026 Dalam World •  全ての権利を保有。ノスタルジーが未来と出会う。"
+  },
+
+  ko: {  // Корейский
+    title: "DALAM WORLD",
+    highlight: "어린 시절의 게임",
+    slogan: "노스탤지어 + 현대 메카닉",
+    days: "일", hours: "시간", minutes: "분", seconds: "초",
+    online: "현재 온라인: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> 명의 영웅이 세계에",
+    registerBtn: "등록",
+    downloadBtn: "런처 다운로드",
+    whyTitle: "왜 Dalam World가 MMORPG의 미래인가",
+    feat1Title: "거대한 심리스 월드",
+    feat1Text: "여러 대륙, 수천 명의 플레이어가 하나의 오픈 월드에 — 존 없음, 로딩 화면 없음, 렉 없음.",
+    feat2Title: "50만+ 동시 접속",
+    feat2Text: "유니크 클라이언트가 50만 명 이상을 한 곳에서 지원 — 대기열 없음.",
+    feat3Title: "모든 기기에서 실행",
+    feat3Text: "슈퍼 최적화: 2010년대 구형 PC, 나쁜 인터넷 — 게임 시작하고 부드럽게 날아감.",
+    readyTitle: "돌아올 준비… 더 강하게?",
+    readyText: "2026년 7월 16일 — 새로운 시대의 시작. 전설에 합류하세요.",
+    enterBtn: "Dalam.World — 입장!",
+    footer: "© 2026 Dalam World •  모든 권리 보유. 노스탤지어가 미래를 만난다."
+  },
+        "zh-tw": {  // Тайваньский китайский (традиционные иероглифы)
+    title: "DALAM WORLD",
+    highlight: "你童年的那款遊戲",
+    slogan: "懷舊 + 現代機制",
+    days: "天", hours: "小時", minutes: "分鐘", seconds: "秒",
+    online: "目前在線： <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "註冊",
+    downloadBtn: "下載啟動器",
+    whyTitle: "為什麼 Dalam World 是 MMORPG 的未來",
+    feat1Title: "巨大的無縫世界",
+    feat1Text: "多個大陸，數千名玩家在同一個開放世界中 — 無分區、無載入畫面、無延遲。",
+    feat2Title: "500,000+ 同時在線",
+    feat2Text: "獨特客戶端可承受超過五十萬人同時在同一地點 — 永遠沒有排隊。",
+    feat3Title: "任何電腦都能跑",
+    feat3Text: "超級優化：2010 年代的老舊電腦、差的網路 — 遊戲一啟動就順暢飛奔。",
+    readyTitle: "準備回歸…但更強大？",
+    readyText: "2026 年 7 月 16 日 — 新時代的開始。加入傳奇吧。",
+    enterBtn: "Dalam.World — 進入！",
+    footer: "© 2026 Dalam World • 保留所有權利。懷舊遇見未來。"
+  },
+
+  fr: {  // Французский
+    title: "DALAM WORLD",
+    highlight: "Le jeu de ton enfance",
+    slogan: "Nostalgie + mécaniques modernes",
+    days: "Jours", hours: "Heures", minutes: "Minutes", seconds: "Secondes",
+    online: "En ligne maintenant : <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "S'inscrire",
+    downloadBtn: "Télécharger le launcher",
+    whyTitle: "Pourquoi Dalam World est l'avenir des MMORPG",
+    feat1Title: "Un immense monde fluide",
+    feat1Text: "Plusieurs continents, des milliers de joueurs dans un seul monde ouvert — sans zones, sans écrans de chargement, sans lags.",
+    feat2Title: "Plus de 500 000 simultanément",
+    feat2Text: "Client unique capable de supporter plus d'un demi-million de personnes au même endroit — jamais de file d'attente.",
+    feat3Title: "Tourne sur tout",
+    feat3Text: "Super optimisé : vieux PC des années 2010, mauvaise connexion — le jeu démarre et tourne parfaitement.",
+    readyTitle: "Prêt à revenir… mais en mieux ?",
+    readyText: "16 juillet 2026 — le début d'une nouvelle ère. Rejoins la légende.",
+    enterBtn: "Dalam.World — Entrer !",
+    footer: "© 2026 Dalam World • Tous droits réservés. La nostalgie rencontre l'avenir."
+  },
+
+  tl: {  // Филиппинский (Tagalog/Filipino)
+    title: "DALAM WORLD",
+    highlight: "Ang laro noong bata ka pa",
+    slogan: "Nostalgia + modernong mechanics",
+    days: "Araw", hours: "Oras", minutes: "Minuto", seconds: "Segundo",
+    online: "Online ngayon: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "Magrehistro",
+    downloadBtn: "I-download ang Launcher",
+    whyTitle: "Bakit ang Dalam World ang kinabukasan ng MMORPG",
+    feat1Title: "Napakalaking seamless world",
+    feat1Text: "Maraming kontinente, libu-libong manlalaro sa iisang open world — walang zones, walang loading screens, walang lag.",
+    feat2Title: "500,000+ sabay-sabay",
+    feat2Text: "Unique client na kayang suportahan ang higit sa kalahating milyong tao sa iisang lugar — walang pila kahit kailan.",
+    feat3Title: "Tumatakbo sa lahat",
+    feat3Text: "Super optimized: lumang PC mula 2010s, mahinang internet — nagloload at tumatakbo nang maayos ang laro.",
+    readyTitle: "Handa ka na bang bumalik… pero mas malakas?",
+    readyText: "Hulyo 16, 2026 — simula ng bagong panahon. Sumali sa alamat.",
+    enterBtn: "Dalam.World — Pasok!",
+    footer: "© 2026 Dalam World • Lahat ng karapatan ay nakalaan. Nostalgia meets ang hinaharap."
+  },
+
+  vi: {  // Вьетнамский
+    title: "DALAM WORLD",
+    highlight: "Trò chơi tuổi thơ của bạn",
+    slogan: "Hoài niệm + cơ chế hiện đại",
+    days: "Ngày", hours: "Giờ", minutes: "Phút", seconds: "Giây",
+    online: "Đang online: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "Đăng ký",
+    downloadBtn: "Tải Launcher",
+    whyTitle: "Tại sao Dalam World là tương lai của MMORPG",
+    feat1Title: "Thế giới liền mạch khổng lồ",
+    feat1Text: "Nhiều lục địa, hàng ngàn người chơi trong cùng một thế giới mở — không vùng, không màn hình tải, không lag.",
+    feat2Title: "Hơn 500.000 người cùng lúc",
+    feat2Text: "Client độc đáo chịu được hơn nửa triệu người cùng một nơi — không bao giờ phải xếp hàng.",
+    feat3Title: "Chạy được trên mọi thứ",
+    feat3Text: "Siêu tối ưu: PC cũ từ những năm 2010, mạng kém — game khởi động và chạy mượt mà.",
+    readyTitle: "Sẵn sàng quay lại… nhưng mạnh mẽ hơn?",
+    readyText: "16 tháng 7 năm 2026 — khởi đầu kỷ nguyên mới. Tham gia huyền thoại.",
+    enterBtn: "Dalam.World — Vào thôi!",
+    footer: "© 2026 Dalam World • Bảo lưu mọi quyền. Hoài niệm gặp gỡ tương lai."
+  },
+
+  ar: {  // Арабский (справа налево — добавь в CSS: direction: rtl; text-align: right; для блока)
+    title: "DALAM WORLD",
+    highlight: "لعبة طفولتك",
+    slogan: "الحنين + آليات حديثة",
+    days: "أيام", hours: "ساعات", minutes: "دقائق", seconds: "ثوانٍ",
+    online: "متصل الآن: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "تسجيل",
+    downloadBtn: "تحميل اللاونشر",
+    whyTitle: "لماذا Dalam World هو مستقبل ألعاب MMORPG",
+    feat1Title: "عالم هائل سلس",
+    feat1Text: "قارات متعددة، آلاف اللاعبين في عالم مفتوح واحد — بدون مناطق، بدون شاشات تحميل، بدون تأخير.",
+    feat2Title: "أكثر من 500,000 في وقت واحد",
+    feat2Text: "عميل فريد يتحمل أكثر من نصف مليون شخص في مكان واحد — لا طوابير أبدًا.",
+    feat3Title: "يعمل على كل شيء",
+    feat3Text: "محسن بشكل فائق: حاسوب قديم من 2010، إنترنت ضعيف — اللعبة تبدأ وتجري بسلاسة.",
+    readyTitle: "مستعد للعودة… لكن أقوى؟",
+    readyText: "16 يوليو 2026 — بداية عصر جديد. انضم إلى الأسطورة.",
+    enterBtn: "Dalam.World — ادخل!",
+    footer: "© 2026 Dalam World • جميع الحقوق محفوظة. الحنين يلتقي بالمستقبل."
+  },
+
+  ur: {  // Урду (пакистанский, справа налево — direction: rtl;)
+    title: "DALAM WORLD",
+    highlight: "آپ کی بچپن کی گیم",
+    slogan: "نو سٹیلجیا + جدید میکینکس",
+    days: "دن", hours: "گھنٹے", minutes: "منٹ", seconds: "سیکنڈ",
+    online: "اب آن لائن: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+    registerBtn: "رجسٹر کریں",
+    downloadBtn: "لانچر ڈاؤن لوڈ کریں",
+    whyTitle: "دالم ورلڈ MMORPG کا مستقبل کیوں ہے",
+    feat1Title: "بہت بڑا بغیر وقفے کا دنیا",
+    feat1Text: "کئی براعظم، ہزاروں کھلاڑی ایک ہی اوپن ورلڈ میں — کوئی زون نہیں، کوئی لوڈنگ اسکرین نہیں، کوئی لگ نہیں۔",
+    feat2Title: "500,000+ ایک ساتھ",
+    feat2Text: "یونیک کلائنٹ آدھے ملین سے زیادہ لوگوں کو ایک جگہ سپورٹ کرتا ہے — کبھی قطار نہیں۔",
+    feat3Title: "سب کچھ پر چلتا ہے",
+    feat3Text: "سپر آپٹمائزڈ: 2010 کی پرانی پی سی، خراب انٹرنیٹ — گیم شروع ہوتا ہے اور ہموار چلتا ہے۔",
+    readyTitle: "واپس آنے کے لیے تیار… لیکن زیادہ طاقتور؟",
+    readyText: "16 جولائی 2026 — نئی دور کا آغاز۔ لیجنڈ میں شامل ہوں۔",
+    enterBtn: "Dalam.World — داخل ہوں!",
+    footer: "© 2026 Dalam World • تمام حقوق محفوظ ہیں۔ نو سٹیلجیا مستقبل سے ملتی ہے۔"
+  },
+        "th": {  // Тайский (th)
+  title: "DALAM WORLD",
+  highlight: "เกมวัยเด็กของคุณ",
+  slogan: "ความคิดถึง + กลไกสมัยใหม่",
+  days: "วัน", hours: "ชั่วโมง", minutes: "นาที", seconds: "วินาที",
+  online: "ออนไลน์ตอนนี้: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "ลงทะเบียน",
+  downloadBtn: "ดาวน์โหลด Launcher",
+  whyTitle: "ทำไม Dalam World คืออนาคตของ MMORPG",
+  feat1Title: "โลกไร้รอยต่อขนาดยักษ์",
+  feat1Text: "หลายทวีป ผู้เล่นนับพันในโลกเปิดเดียวกัน — ไม่มีโซน ไม่มีหน้าจอโหลด ไม่มีแล็ก",
+  feat2Title: "500,000+ พร้อมกัน",
+  feat2Text: "ไคลเอนต์พิเศษรองรับมากกว่าครึ่งล้านคนในที่เดียว — ไม่มีคิวรอเลย",
+  feat3Title: "รันได้ทุกเครื่อง",
+  feat3Text: "优化สุด ๆ: พีซีเก่าปี 2010s อินเทอร์เน็ตแย่ — เกมเริ่มและลื่นไหลทันที",
+  readyTitle: "พร้อมกลับมา…แต่แรงกว่าเดิม?",
+  readyText: "16 กรกฎาคม 2026 — จุดเริ่มต้นยุคใหม่ เข้าร่วมตำนานกันเถอะ",
+  enterBtn: "Dalam.World — เข้าเลย!",
+  footer: "© 2026 Dalam World • สงวนลิขสิทธิ์ทั้งหมด ความคิดถึงพบกับอนาคต"
+},
+
+"tr": {  // Турецкий (tr)
+  title: "DALAM WORLD",
+  highlight: "Çocukluğunun oyunu",
+  slogan: "Nostalji + modern mekanikler",
+  days: "Gün", hours: "Saat", minutes: "Dakika", seconds: "Saniye",
+  online: "Şu an çevrimiçi: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Kayıt Ol",
+  downloadBtn: "Launcher İndir",
+  whyTitle: "Neden Dalam World MMORPG'nin geleceği",
+  feat1Title: "Dev kesintisiz dünya",
+  feat1Text: "Birden fazla kıta, binlerce oyuncu tek açık dünyada — bölge yok, yükleme ekranı yok, lag yok",
+  feat2Title: "500.000+ aynı anda",
+  feat2Text: "Özel istemci yarım milyondan fazla kişiyi aynı yerde kaldırır — asla kuyruk yok",
+  feat3Title: "Her şeyde çalışır",
+  feat3Text: "Süper optimize: 2010'ların eski PC'si, kötü internet — oyun başlar ve akıcı akar",
+  readyTitle: "Geri dönmeye hazır mısın… ama daha güçlü?",
+  readyText: "16 Temmuz 2026 — yeni bir çağın başlangıcı. Efsaneye katıl",
+  enterBtn: "Dalam.World — Gir!",
+  footer: "© 2026 Dalam World • Tüm hakları saklıdır. Nostalji geleceği karşılıyor"
+},
+
+"es": {  // Испанский (Latin America вариант, нейтральный)
+  title: "DALAM WORLD",
+  highlight: "El juego de tu infancia",
+  slogan: "Nostalgia + mecánicas modernas",
+  days: "Días", hours: "Horas", minutes: "Minutos", seconds: "Segundos",
+  online: "En línea ahora: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Registrarse",
+  downloadBtn: "Descargar Launcher",
+  whyTitle: "Por qué Dalam World es el futuro de los MMORPG",
+  feat1Title: "Mundo seamless gigantesco",
+  feat1Text: "Varios continentes, miles de jugadores en un solo mundo abierto — sin zonas, sin pantallas de carga, sin lag",
+  feat2Title: "Más de 500.000 simultáneos",
+  feat2Text: "Cliente único soporta más de medio millón de personas en un solo lugar — nunca filas",
+  feat3Title: "Funciona en todo",
+  feat3Text: "Súper optimizado: PC viejo de los 2010, internet malo — el juego arranca y vuela suave",
+  readyTitle: "¿Listo para volver… pero más fuerte?",
+  readyText: "16 de julio de 2026 — el inicio de una nueva era. Únete a la leyenda",
+  enterBtn: "Dalam.World — ¡Entra!",
+  footer: "© 2026 Dalam World • Todos los derechos reservados. La nostalgia se encuentra con el futuro"
+},
+
+"it": {  // Итальянский (it)
+  title: "DALAM WORLD",
+  highlight: "Il gioco della tua infanzia",
+  slogan: "Nostalgia + meccaniche moderne",
+  days: "Giorni", hours: "Ore", minutes: "Minuti", seconds: "Secondi",
+  online: "Online ora: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Registrati",
+  downloadBtn: "Scarica Launcher",
+  whyTitle: "Perché Dalam World è il futuro degli MMORPG",
+  feat1Title: "Mondo seamless enorme",
+  feat1Text: "Più continenti, migliaia di giocatori in un unico mondo aperto — senza zone, senza schermi di caricamento, senza lag",
+  feat2Title: "Oltre 500.000 simultanei",
+  feat2Text: "Client unico regge più di mezzo milione di persone nello stesso posto — mai code",
+  feat3Title: "Gira su tutto",
+  feat3Text: "Super ottimizzato: vecchio PC anni 2010, internet scarso — il gioco parte e vola liscio",
+  readyTitle: "Pronto a tornare… ma più forte?",
+  readyText: "16 luglio 2026 — l'inizio di una nuova era. Unisciti alla leggenda",
+  enterBtn: "Dalam.World — Entra!",
+  footer: "© 2026 Dalam World • Tutti i diritti riservati. La nostalgia incontra il futuro"
+},
+
+"ms": {  // Малайский (Bahasa Melayu, ms)
+  title: "DALAM WORLD",
+  highlight: "Permainan zaman kanak-kanak anda",
+  slogan: "Nostalgia + mekanik moden",
+  days: "Hari", hours: "Jam", minutes: "Minit", seconds: "Saat",
+  online: "Dalam talian sekarang: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Daftar",
+  downloadBtn: "Muat Turun Launcher",
+  whyTitle: "Mengapa Dalam World adalah masa depan MMORPG",
+  feat1Title: "Dunia seamless gergasi",
+  feat1Text: "Pelbagai benua, beribu pemain dalam satu dunia terbuka — tiada zon, tiada skrin muat, tiada lag",
+  feat2Title: "500,000+ serentak",
+  feat2Text: "Klien unik menampung lebih setengah juta orang di satu tempat — tiada giliran langsung",
+  feat3Title: "Berjalan pada segalanya",
+  feat3Text: "Super dioptimumkan: PC lama tahun 2010-an, internet lemah — permainan mula dan lancar",
+  readyTitle: "Sedia kembali… tapi lebih kuat?",
+  readyText: "16 Julai 2026 — permulaan era baru. Sertai legenda",
+  enterBtn: "Dalam.World — Masuk!",
+  footer: "© 2026 Dalam World • Semua hak cipta terpelihara. Nostalgia bertemu masa depan"
+},
+
+"ro": {  // Румынский (ro)
+  title: "DALAM WORLD",
+  highlight: "Jocul copilăriei tale",
+  slogan: "Nostalgie + mecanici moderne",
+  days: "Zile", hours: "Ore", minutes: "Minute", seconds: "Secunde",
+  online: "Online acum: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Înregistrează-te",
+  downloadBtn: "Descarcă Launcher",
+  whyTitle: "De ce Dalam World este viitorul MMORPG-urilor",
+  feat1Title: "Lume seamless uriașă",
+  feat1Text: "Mai multe continente, mii de jucători într-o singură lume deschisă — fără zone, fără ecrane de încărcare, fără lag",
+  feat2Title: "Peste 500.000 simultan",
+  feat2Text: "Client unic suportă peste jumătate de milion de oameni în același loc — niciodată cozi",
+  feat3Title: "Rulează pe orice",
+  feat3Text: "Super optimizat: PC vechi din 2010, internet slab — jocul pornește și merge lin",
+  readyTitle: "Gata să te întorci… dar mai puternic?",
+  readyText: "16 iulie 2026 — începutul unei noi ere. Alătură-te legendei",
+  enterBtn: "Dalam.World — Intră!",
+  footer: "© 2026 Dalam World • Toate drepturile rezervate. Nostalgia întâlnește viitorul"
+},
+
+"bg": {  // Болгарский (bg)
+  title: "DALAM WORLD",
+  highlight: "Играта от детството ти",
+  slogan: "Носталгия + модерни механики",
+  days: "Дни", hours: "Часа", minutes: "Минути", seconds: "Секунди",
+  online: "Онлайн сега: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Регистрирай се",
+  downloadBtn: "Изтегли Launcher",
+  whyTitle: "Защо Dalam World е бъдещето на MMORPG",
+  feat1Title: "Огромен безшовен свят",
+  feat1Text: "Няколко континента, хиляди играчи в един отворен свят — без зони, без екрани за зареждане, без лаг",
+  feat2Title: "Над 500 000 едновременно",
+  feat2Text: "Уникален клиент издържа над половин милион души на едно място — никога опашки",
+  feat3Title: "Работи на всичко",
+  feat3Text: "Супер оптимизиран: стар ПК от 2010-те, лош интернет — играта стартира и лети гладко",
+  readyTitle: "Готов ли си да се върнеш… но по-силен?",
+  readyText: "16 юли 2026 — началото на нова ера. Присъедини се към легендата",
+  enterBtn: "Dalam.World — Влез!",
+  footer: "© 2026 Dalam World • Всички права запазени. Носталгията среща бъдещето"
+},
+
+"cs": {  // Чешский (cs)
+  title: "DALAM WORLD",
+  highlight: "Hra tvého dětství",
+  slogan: "Nostalgie + moderní mechaniky",
+  days: "Dny", hours: "Hodiny", minutes: "Minuty", seconds: "Sekundy",
+  online: "Online teď: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Registrovat se",
+  downloadBtn: "Stáhnout Launcher",
+  whyTitle: "Proč je Dalam World budoucností MMORPG",
+  feat1Title: "Obrovský bezšvový svět",
+  feat1Text: "Několik kontinentů, tisíce hráčů v jednom otevřeném světě — bez zón, bez načítacích obrazovek, bez lagu",
+  feat2Title: "Více než 500 000 současně",
+  feat2Text: "Unikátní klient zvládne přes půl milionu lidí na jednom místě — žádné fronty",
+  feat3Title: "Běží na všem",
+  feat3Text: "Super optimalizováno: starý PC z 2010, špatný internet — hra startuje a jede hladce",
+  readyTitle: "Připraven vrátit se… ale silnější?",
+  readyText: "16. července 2026 — začátek nové éry. Přidej se k legendě",
+  enterBtn: "Dalam.World — Vstup!",
+  footer: "© 2026 Dalam World • Všechna práva vyhrazena. Nostalgie se setkává s budoucností"
+},
+
+"nl": {  // Нидерландский (nl)
+  title: "DALAM WORLD",
+  highlight: "Het spel uit je kindertijd",
+  slogan: "Nostalgie + moderne mechanics",
+  days: "Dagen", hours: "Uren", minutes: "Minuten", seconds: "Seconden",
+  online: "Nu online: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Registreren",
+  downloadBtn: "Launcher downloaden",
+  whyTitle: "Waarom Dalam World de toekomst van MMORPG's is",
+  feat1Title: "Enorme naadloze wereld",
+  feat1Text: "Meerdere continenten, duizenden spelers in één open wereld — geen zones, geen laadschermen, geen lag",
+  feat2Title: "Meer dan 500.000 tegelijk",
+  feat2Text: "Unieke client ondersteunt meer dan een half miljoen mensen op één plek — nooit wachtrijen",
+  feat3Title: "Draait op alles",
+  feat3Text: "Super geoptimaliseerd: oude PC uit 2010, slechte internet — spel start en loopt soepel",
+  readyTitle: "Klaar om terug te keren… maar sterker?",
+  readyText: "16 juli 2026 — begin van een nieuw tijdperk. Word deel van de legende",
+  enterBtn: "Dalam.World — Binnen!",
+  footer: "© 2026 Dalam World • Alle rechten voorbehouden. Nostalgie ontmoet de toekomst"
+},
+
+"sv": {  // Шведский (sv) — как представитель скандинавских
+  title: "DALAM WORLD",
+  highlight: "Spelet från din barndom",
+  slogan: "Nostalgi + moderna mekaniker",
+  days: "Dagar", hours: "Timmar", minutes: "Minuter", seconds: "Sekunder",
+  online: "Online nu: <span id=\"total-online\" style=\"color:#ffd700; font-weight:bold;\">—</span> ",
+  registerBtn: "Registrera dig",
+  downloadBtn: "Ladda ner Launcher",
+  whyTitle: "Varför Dalam World är framtiden för MMORPG",
+  feat1Title: "Enorm sömlös värld",
+  feat1Text: "Flera kontinenter, tusentals spelare i en öppen värld — inga zoner, inga laddningsskärmar, ingen lag",
+  feat2Title: "Över 500 000 samtidigt",
+  feat2Text: "Unik klient klarar över en halv miljon människor på samma plats — aldrig köer",
+  feat3Title: "Kör på allt",
+  feat3Text: "Superoptimerat: gammal PC från 2010-talet, dåligt internet — spelet startar och flyter smidigt",
+  readyTitle: "Redo att återvända… men starkare?",
+  readyText: "16 juli 2026 — början på en ny era. Gå med i legenden",
+  enterBtn: "Dalam.World — Gå in!",
+  footer: "© 2026 Dalam World • Alla rättigheter förbehållna. Nostalgi möter framtiden"
+}
+        
+      // Добавь переводы для остальных языков здесь (el, pt, hi, pl, de, id, zh, ja, ko)
+      // Пока оставил только ru и en как пример — остальные можно заполнить аналогично
+      // Для pt используй бразильский вариант португальского
+      // Для hi — хинди, zh — упрощённый китайский и т.д.
+    };
+
+    // Supported languages
+   // const supportedLangs = ['en', 'ru', 'el', 'pt', 'hi', 'pl', 'de', 'id', 'zh', 'ja', 'ko'];
+      const supportedLangs = [
+  'en',      
+  'ru',      
+  'el',      
+  'pt',     
+  'hi',      
+  'pl',     
+  'de',      
+  'id',      
+  'zh',      
+  'zh-tw',   
+  'ja',      
+  'ko',      
+  'fr',      
+  'tl',      
+  'vi',      
+  'ar',      
+  'ur',      
+  'th',      
+  'tr',      
+  'es',      
+  'it',     
+  'ms',      
+  'ro',      
+  'bg',      
+  'cs',      
+  'nl',      
+  'sv'       
+];
+
+    // Get browser language
+    function getBrowserLang() {
+      const lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      const shortLang = lang.split('-')[0].toLowerCase();
+      return supportedLangs.includes(shortLang) ? shortLang : 'en';
+    }
+
+    // Current language
+    let currentLang = localStorage.getItem('lang') || getBrowserLang();
+
+    // Apply language
+    function setLanguage(lang) {
+      if (!translations[lang]) lang = 'en';
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+
+      document.querySelectorAll('[id]').forEach(el => {
+        const key = el.id;
+        if (translations[lang][key]) {
+          if (el.id === 'online') {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+
+      // Special for countdown labels (they have data-key)
+      document.querySelectorAll('.countdown-label').forEach(el => {
+        const key = el.dataset.key;
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+      });
+
+      document.documentElement.lang = lang;
+      document.getElementById('langSelect').value = lang;
+    }
+
+    // Language selector
+    document.getElementById('langSelect').addEventListener('change', e => {
+      setLanguage(e.target.value);
+    });
+
+    // Initial set
+    setLanguage(currentLang);
+        
+      
+
+    // Online fetch (remains the same)
+    async function fetchOnline() {
+      try {
+        const res = await fetch('https://online-api.dalam.world');
+        const data = await res.json();
+        document.getElementById('total-online').textContent = data.total.toLocaleString(currentLang === 'ru' ? 'ru-RU' : 'en-US');
+      } catch {}
+    }
+    fetchOnline();
+    setInterval(fetchOnline, 35000);
+
+    // Countdown (remains the same)
+    function updateTimer() {
+      const target = new Date('2026-07-16T16:00:00Z').getTime();
+      const now = Date.now();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = `<div style="font-size:2.5rem;color:#ff2e63;">${currentLang === 'ru' ? 'Сервер запущен!' : 'Server is live!'}</div>`;
+        return;
+      }
+
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      document.getElementById('days').textContent = d;
+      document.getElementById('hours').textContent = h.toString().padStart(2,'0');
+      document.getElementById('minutes').textContent = m.toString().padStart(2,'0');
+      document.getElementById('seconds').textContent = s.toString().padStart(2,'0');
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
