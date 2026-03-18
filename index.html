@@ -377,9 +377,10 @@
       <div class="online" style="visibility: hidden" id="online">Online now: <span id="total-online" style="color:#ffd700; font-weight:bold;">—</span> heroes in the world</div>
 
       <div class="buttons">
-        <a href="https://dalam.world/" class="btn btn-primary" id="registerBtn">Register</a>
-        <a href="https://dalam.world/#modal-downloads" class="btn btn-outline" id="downloadBtn">Download Launcher</a>
+        <a href="https://dalam.world/register/" class="btn btn-primary" id="registerBtn">Register</a>
+        
       </div>
+        <a href="https://dalam.world/#modal-downloads" style="visibility: hidden" class="btn btn-outline" id="downloadBtn">Download Launcher</a>
     </div>
   </header>
 
@@ -409,7 +410,7 @@
     <p id="readyText" style="font-size:1.4rem; max-width:800px; margin:2rem auto; color:#d0c8ff;">
       July 16, 2026 — the start of a new era. Join the legend.
     </p>
-    <a href="https://dalam.world/" class="btn btn-primary" style="font-size:1.7rem; padding:1.4rem 4.5rem; margin-top:2rem;" id="enterBtn">
+    <a href="https://dalam.world/forums/topic/58-start-game/" class="btn btn-primary" style="font-size:1.7rem; padding:1.4rem 4.5rem; margin-top:2rem;" id="enterBtn">
       Enter!
     </a>
   </section>
@@ -1081,7 +1082,7 @@
       } catch {}
     }
     fetchOnline();
-    setInterval(fetchOnline, 35000);
+    setInterval(fetchOnline, 350000);
 
     // Countdown (remains the same)
     function updateTimer() {
