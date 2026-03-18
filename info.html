@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <title>Dalam.World — Seamless World 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script defer src="https://mpwmp.dkon.app/pixel/GxRA8y1uTZfCh9iP"></script>
+<link rel='shortcut icon' href='https://play.dalam.world/favicon.ico'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #00d4ff;
+      --accent: #ff2e63;
+      --dark: #0d001a;
+      --dark-2: #1a0033;
+      --text: #e0e0ff;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      background: var(--dark);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    header {
+      position: relative;
+      min-height: 100vh;
+      background: url('https://filecloud-63-ars-cont-st.dkon.app/wp-cont/cloud63/Dkon.APP_normal_7d515bc.png') no-repeat center center / cover fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 5% 6rem;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13,0,26,0.35), rgba(13,0,26,0.75) 55%, var(--dark) 100%);
+    }
+    .container { position: relative; z-index: 2; max-width: 1180px; width: 100%; }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(3.5rem, 12vw, 10rem);
+      color: var(--primary);
+      text-shadow: 0 0 30px var(--primary), 0 0 60px rgba(0,212,255,0.4);
+      margin-bottom: 1.2rem;
+      letter-spacing: 4px;
+      animation: glow 5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary); }
+      to   { text-shadow: 0 0 50px var(--primary), 0 0 100px var(--primary); }
+    }
+    .tagline { font-size: clamp(1.2rem, 5vw, 1.9rem); max-width: 920px; margin: 0 auto 2.5rem; font-weight: 300; opacity: 0.95; }
+    .countdown {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+      margin: 2rem 0 3.5rem; font-family: 'Orbitron', sans-serif;
+    }
+    .countdown-item {
+      background: rgba(0, 212, 255, 0.07); backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 12px;
+      padding: 1.1rem 1.6rem; min-width: 100px; text-align: center;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.45); transition: all 0.3s ease;
+    }
+    .countdown-item:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(0,212,255,0.25); }
+    .number { font-size: clamp(2.2rem, 8vw, 3.6rem); color: var(--primary); font-weight: 700; line-height: 1; display: block; }
+    .label { font-size: 0.95rem; opacity: 0.85; margin-top: 0.3rem; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin: 1.5rem 0 3rem; }
+    .btn {
+      padding: 1rem 2.2rem; font-size: clamp(1.1rem, 4vw, 1.35rem); font-weight: 600;
+      text-decoration: none; color: white; border-radius: 999px; transition: all 0.35s ease;
+      min-width: 220px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      position: relative; overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top:0; left:-100%; width:100%; height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); transition: 0.6s;
+    }
+    .btn:hover::before { left: 100%; }
+    .btn:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 12px 30px rgba(0,0,0,0.55); }
+    .btn-register { background: linear-gradient(135deg, #ff2e63, #ff6b6b); }
+    .btn-tg      { background: linear-gradient(135deg, #00aaff, #40d0ff); }
+    .btn-discord  { background: linear-gradient(135deg, #5865f2, #7c8eff); }
+    section { padding: 6rem 5% 8rem; text-align: center; }
+    .features { background: linear-gradient(to bottom, #0d001a 0%, #140033 100%); }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.4rem, 8vw, 4.2rem);
+      color: var(--primary); margin-bottom: 2rem;
+      text-shadow: 0 0 25px rgba(0,212,255,0.5);
+    }
+    .big-text { font-size: clamp(1.25rem, 4.5vw, 1.7rem); max-width: 960px; margin: 2rem auto; line-height: 1.6; }
+    .highlight { color: var(--primary); font-weight: 600; }
+    footer { padding: 3rem 5%; text-align: center; font-size: 0.95rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 900px) {
+      header { padding: 3rem 5% 5rem; min-height: 80vh; }
+      .countdown { gap: 0.8rem; }
+      .countdown-item { min-width: 90px; padding: 0.9rem 1.2rem; }
+      .number { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+      .buttons { gap: 1rem; }
+      .btn { min-width: 48%; padding: 1.1rem 1.8rem; }
+    }
+    @media (max-width: 600px) {
+      header { padding: 2.5rem 6% 4.5rem; }
+      h1 { letter-spacing: 2px; }
+      .tagline { margin-bottom: 2rem; }
+      .countdown { flex-direction: column; align-items: center; gap: 1rem; }
+      .countdown-item { width: 65%; max-width: 240px; }
+      .buttons { flex-direction: column; align-items: center; gap: 1.1rem; }
+      .btn { width: 100%; max-width: 360px; min-width: auto; padding: 1.2rem 2rem; font-size: 1.25rem; }
+      section { padding: 5rem 6% 7rem; }
+      .big-text { font-size: 1.35rem; }
+    }
+    @media (max-width: 380px) {
+      .countdown-item { width: 80%; }
+      .btn { font-size: 1.15rem; padding: 1rem 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 data-key="title">Dalam.World</h1>
+      <p class="tagline" data-key="tagline">One seamless world · 500,000+ players together · No lags, no zones</p>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="number" id="days">--</span>
+          <div class="label" data-key="days">Days</div>
+        </div>
+        <div class="countdown-item">
+          <span class="number" id="hours">--</span>
+          <div class="label" data-key="hours">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <span class="number" id="minutes">--</span>
+          <div class="label" data-key="minutes">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <span class="number" id="seconds">--</span>
+          <div class="label" data-key="seconds">Seconds</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="https://dalam.world/register/" target="_blank" class="btn btn-register" data-key="register">Register on Forum</a>
+        <a href="https://t.me/+YwJyjLo1ytZmNjZh" target="_blank" class="btn btn-tg" data-key="telegram">Telegram Channel</a>
+        <a href="https://discord.gg/vbQ347nuxd" target="_blank" class="btn btn-discord" data-key="discord">Discord Server</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="container">
+      <h2 data-key="more_than_mmo">More than just an MMO</h2>
+      
+      <p class="big-text" data-key="living_world">
+        Dalam World is a <span class="highlight">living world</span> where players set the rules themselves.
+      </p>
+
+      <p class="big-text" data-key="best_of_mmos">
+        We took the best from all popular MMOs — everyone will find something familiar here.
+      </p>
+
+      <p class="big-text" style="margin:3.5rem auto 2.5rem;" data-key="seamless_world">
+        <strong>One huge seamless world</strong><br>
+        All players together — <span class="highlight">500,000+</span> without lags or zone divisions.
+      </p>
+
+      <p class="big-text" data-key="low_requirements">
+        Runs on weak PCs and bad internet<br>
+        Full support: <strong>Windows • Linux • macOS</strong>
+      </p>
+
+      <div style="margin:5.5rem 0 2rem;">
+        <h2 style="font-size: clamp(2.2rem, 7vw, 3.6rem);" data-key="opening_soon">Opening is coming soon!</h2>
+        <p class="big-text" style="margin:2rem auto 3rem;" data-key="join_now">
+          Subscribe and register now — be among the first!
+        </p>
+        <div class="buttons">
+          <a href="https://dalam.world/register/" target="_blank" class="btn btn-register" data-key="register_short">Register</a>
+          <a href="https://t.me/+YwJyjLo1ytZmNjZh" target="_blank" class="btn btn-tg" data-key="telegram_short">Telegram</a>
+          <a href="https://discord.gg/vbQ347nuxd" target="_blank" class="btn btn-discord" data-key="discord_short">Discord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-key="footer">
+    © 2026 Dalam.World — All rights reserved
+  </footer>
+
+  <script>
+    // ───────────────────────────────────────────────
+    // Переводы (по умолчанию en)
+    // ───────────────────────────────────────────────
+    const translations = {
+      en: {
+        title: "Dalam.World",
+        tagline: "One seamless world · 500,000+ players together · No lags, no zones",
+        days: "Days",
+        hours: "Hours",
+        minutes: "Minutes",
+        seconds: "Seconds",
+        register: "Register on Forum",
+        telegram: "Telegram Channel",
+        discord: "Discord Server",
+        more_than_mmo: "More than just an MMO",
+        living_world: "Dalam World is a <span class='highlight'>living world</span> where players set the rules themselves.",
+        best_of_mmos: "We took the best from all popular MMOs — everyone will find something familiar here.",
+        seamless_world: "<strong>One huge seamless world</strong><br>All players together — <span class='highlight'>500,000+</span> without lags or zone divisions.",
+        low_requirements: "Runs on weak PCs and bad internet<br>Full support: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Opening is coming soon!",
+        join_now: "Subscribe and register now — be among the first!",
+        register_short: "Register",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — All rights reserved"
+      },
+      ru: {
+        title: "Dalam.World",
+        tagline: "Один бесшовный мир · 500 000+ игроков вместе · Без лагов и зон",
+        days: "Дней",
+        hours: "Часов",
+        minutes: "Минут",
+        seconds: "Секунд",
+        register: "Зарегистрироваться на форуме",
+        telegram: "Канал в Telegram",
+        discord: "Сервер Discord",
+        more_than_mmo: "Больше, чем просто MMO",
+        living_world: "Dalam World — это <span class='highlight'>живой мир</span>, где игроки сами устанавливают правила.",
+        best_of_mmos: "Мы взяли лучшее из всех популярных MMO — каждый найдёт здесь что-то родное.",
+        seamless_world: "<strong>Один огромный бесшовный мир</strong><br>Все игроки вместе — <span class='highlight'>500 000+</span> без лагов и разделения на зоны.",
+        low_requirements: "Работает на слабых ПК и плохом интернете<br>Полная поддержка: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Открытие уже близко!",
+        join_now: "Подписывайся и регистрируйся сейчас — будь среди первых!",
+        register_short: "Регистрация",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Все права защищены"
+      },
+      uk: {
+        title: "Dalam.World",
+        tagline: "Один безшовний світ · 500 000+ гравців разом · Без лагів і зон",
+        days: "Днів",
+        hours: "Годин",
+        minutes: "Хвилин",
+        seconds: "Секунд",
+        register: "Зареєструватися на форумі",
+        telegram: "Канал у Telegram",
+        discord: "Сервер Discord",
+        more_than_mmo: "Більше, ніж просто MMO",
+        living_world: "Dalam World — це <span class='highlight'>живий світ</span>, де гравці самі встановлюють правила.",
+        best_of_mmos: "Ми взяли найкраще з усіх популярних MMO — кожен знайде тут щось рідне.",
+        seamless_world: "<strong>Один величезний безшовний світ</strong><br>Усі гравці разом — <span class='highlight'>500 000+</span> без лагів і поділу на зони.",
+        low_requirements: "Працює на слабких ПК і поганому інтернеті<br>Повна підтримка: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Відкриття вже близько!",
+        join_now: "Підписуйся та реєструйся зараз — будь серед перших!",
+        register_short: "Реєстрація",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Усі права захищено"
+      },
+      "pt-BR": {
+        title: "Dalam.World",
+        tagline: "Um mundo sem costuras · Mais de 500.000 jogadores juntos · Sem lags, sem zonas",
+        days: "Dias",
+        hours: "Horas",
+        minutes: "Minutos",
+        seconds: "Segundos",
+        register: "Registrar no Fórum",
+        telegram: "Canal Telegram",
+        discord: "Servidor Discord",
+        more_than_mmo: "Mais do que apenas um MMO",
+        living_world: "Dalam World é um <span class='highlight'>mundo vivo</span> onde os jogadores definem as regras.",
+        best_of_mmos: "Pegamos o melhor de todos os MMOs populares — todos encontrarão algo familiar aqui.",
+        seamless_world: "<strong>Um enorme mundo sem costuras</strong><br>Todos os jogadores juntos — <span class='highlight'>500.000+</span> sem lags ou divisões de zonas.",
+        low_requirements: "Funciona em PCs fracos e internet ruim<br>Suporte total: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Abertura está chegando!",
+        join_now: "Inscreva-se e registre-se agora — seja um dos primeiros!",
+        register_short: "Registrar",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Todos os direitos reservados"
+      },
+      el: {
+        title: "Dalam.World",
+        tagline: "Ένας απρόσκοπτος κόσμος · Πάνω από 500.000 παίκτες μαζί · Χωρίς lags, χωρίς ζώνες",
+        days: "Ημέρες",
+        hours: "Ώρες",
+        minutes: "Λεπτά",
+        seconds: "Δευτερόλεπτα",
+        register: "Εγγραφή στο Φόρουμ",
+        telegram: "Κανάλι Telegram",
+        discord: "Διακομιστής Discord",
+        more_than_mmo: "Περισσότερο από ένα απλό MMO",
+        living_world: "Το Dalam World είναι ένας <span class='highlight'>ζωντανός κόσμος</span> όπου οι παίκτες θέτουν οι ίδιοι τους κανόνες.",
+        best_of_mmos: "Πήραμε τα καλύτερα από όλα τα δημοφιλή MMO — ο καθένας θα βρει κάτι οικείο εδώ.",
+        seamless_world: "<strong>Ένας τεράστιος απρόσκοπτος κόσμος</strong><br>Όλοι οι παίκτες μαζί — <span class='highlight'>500.000+</span> χωρίς lags ή ζώνες.",
+        low_requirements: "Λειτουργεί σε αδύναμους υπολογιστές και κακό internet<br>Πλήρης υποστήριξη: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Το άνοιγμα πλησιάζει!",
+        join_now: "Εγγραφείτε και εγγραφείτε τώρα — γίνετε από τους πρώτους!",
+        register_short: "Εγγραφή",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Όλα τα δικαιώματα διατηρούνται"
+      },
+      vi: {
+        title: "Dalam.World",
+        tagline: "Một thế giới liền mạch · Hơn 500.000 người chơi cùng lúc · Không lag, không vùng",
+        days: "Ngày",
+        hours: "Giờ",
+        minutes: "Phút",
+        seconds: "Giây",
+        register: "Đăng ký trên Diễn đàn",
+        telegram: "Kênh Telegram",
+        discord: "Máy chủ Discord",
+        more_than_mmo: "Hơn cả một MMO thông thường",
+        living_world: "Dalam World là một <span class='highlight'>thế giới sống động</span> nơi người chơi tự đặt ra luật lệ.",
+        best_of_mmos: "Chúng tôi lấy những điều tốt nhất từ mọi MMO nổi tiếng — ai cũng sẽ tìm thấy điều gì đó quen thuộc.",
+        seamless_world: "<strong>Một thế giới liền mạch khổng lồ</strong><br>Tất cả người chơi cùng nhau — <span class='highlight'>hơn 500.000</span> không lag, không chia vùng.",
+        low_requirements: "Chạy mượt trên máy yếu và mạng kém<br>Hỗ trợ đầy đủ: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Sắp mở cửa!",
+        join_now: "Đăng ký và theo dõi ngay — trở thành người đầu tiên!",
+        register_short: "Đăng ký",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Bảo lưu mọi quyền"
+      },
+      de: {
+        title: "Dalam.World",
+        tagline: "Eine nahtlose Welt · Über 500.000 Spieler zusammen · Keine Lags, keine Zonen",
+        days: "Tage",
+        hours: "Stunden",
+        minutes: "Minuten",
+        seconds: "Sekunden",
+        register: "Im Forum registrieren",
+        telegram: "Telegram-Kanal",
+        discord: "Discord-Server",
+        more_than_mmo: "Mehr als nur ein MMO",
+        living_world: "Dalam World ist eine <span class='highlight'>lebendige Welt</span>, in der die Spieler selbst die Regeln festlegen.",
+        best_of_mmos: "Wir haben das Beste aus allen populären MMOs genommen — jeder findet hier etwas Vertrautes.",
+        seamless_world: "<strong>Eine riesige nahtlose Welt</strong><br>Alle Spieler zusammen — <span class='highlight'>über 500.000</span> ohne Lags oder Zonen.",
+        low_requirements: "Läuft auf schwachen PCs und schlechter Internetverbindung<br>Vollständige Unterstützung: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Eröffnung steht bevor!",
+        join_now: "Jetzt abonnieren und registrieren — sei unter den Ersten!",
+        register_short: "Registrieren",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Alle Rechte vorbehalten"
+      },
+      zh: {
+        title: "Dalam.World",
+        tagline: "一个无缝世界 · 超过50万玩家同服 · 无延迟、无分区",
+        days: "天",
+        hours: "小时",
+        minutes: "分钟",
+        seconds: "秒",
+        register: "论坛注册",
+        telegram: "Telegram频道",
+        discord: "Discord服务器",
+        more_than_mmo: "远不止是一款MMO",
+        living_world: "Dalam World 是一个<span class='highlight'>活生生的世界</span>，玩家自己制定规则。",
+        best_of_mmos: "我们汲取了所有热门MMO的精华——每个人都能在这里找到熟悉的感觉。",
+        seamless_world: "<strong>一个巨大的无缝世界</strong><br>所有玩家同在一个世界——<span class='highlight'>50万+</span>无延迟、无分区。",
+        low_requirements: "即使低配电脑和差网络也能流畅运行<br>完全支持：<strong>Windows • Linux • macOS</strong>",
+        opening_soon: "即将开启！",
+        join_now: "立即订阅并注册——成为首批进入者！",
+        register_short: "注册",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — 保留所有权利"
+      },
+      ja: {
+        title: "Dalam.World",
+        tagline: "一つのシームレスな世界 · 50万人以上のプレイヤーが一緒に · ラグなし、ゾーンなし",
+        days: "日",
+        hours: "時間",
+        minutes: "分",
+        seconds: "秒",
+        register: "フォーラム登録",
+        telegram: "Telegramチャンネル",
+        discord: "Discordサーバー",
+        more_than_mmo: "ただのMMOではない",
+        living_world: "Dalam Worldは<span class='highlight'>生きている世界</span>——プレイヤー自身がルールを決める。",
+        best_of_mmos: "人気MMOの最高の部分だけを集めた——誰もが懐かしい何かを見つけられる。",
+        seamless_world: "<strong>巨大なシームレスワールド</strong><br>全プレイヤーが一緒に——<span class='highlight'>50万以上</span>ラグなし・ゾーンなし。",
+        low_requirements: "低スペックPCや低速回線でも快適<br>完全対応：<strong>Windows • Linux • macOS</strong>",
+        opening_soon: "もうすぐオープン！",
+        join_now: "今すぐ登録＆フォロー——最初の一人になろう！",
+        register_short: "登録",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — 全ての権利を保有"
+      },
+      id: {
+        title: "Dalam.World",
+        tagline: "Satu dunia tanpa batas · Lebih dari 500.000 pemain bersama · Tanpa lag, tanpa zona",
+        days: "Hari",
+        hours: "Jam",
+        minutes: "Menit",
+        seconds: "Detik",
+        register: "Daftar di Forum",
+        telegram: "Channel Telegram",
+        discord: "Server Discord",
+        more_than_mmo: "Lebih dari sekadar MMO",
+        living_world: "Dalam World adalah <span class='highlight'>dunia hidup</span> di mana pemain menentukan aturan sendiri.",
+        best_of_mmos: "Kami ambil yang terbaik dari semua MMO populer — semua orang akan menemukan sesuatu yang akrab.",
+        seamless_world: "<strong>Satu dunia besar tanpa batas</strong><br>Semua pemain bersama — <span class='highlight'>500.000+</span> tanpa lag atau pembagian zona.",
+        low_requirements: "Berjalan di PC lemah dan internet buruk<br>Dukungan penuh: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Pembukaan sebentar lagi!",
+        join_now: "Berlangganan dan daftar sekarang — jadilah yang pertama!",
+        register_short: "Daftar",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Seluruh hak cipta dilindungi"
+      },
+      pl: {
+        title: "Dalam.World",
+        tagline: "Jeden bezszwowy świat · Ponad 500 000 graczy razem · Bez lagów, bez stref",
+        days: "Dni",
+        hours: "Godziny",
+        minutes: "Minuty",
+        seconds: "Sekundy",
+        register: "Zarejestruj się na forum",
+        telegram: "Kanał Telegram",
+        discord: "Serwer Discord",
+        more_than_mmo: "Więcej niż zwykłe MMO",
+        living_world: "Dalam World to <span class='highlight'>żywy świat</span>, w którym to gracze ustalają zasady.",
+        best_of_mmos: "Wzięliśmy to, co najlepsze z najpopularniejszych MMO — każdy znajdzie tu coś swojskiego.",
+        seamless_world: "<strong>Jeden ogromny bezszwowy świat</strong><br>Wszyscy gracze razem — <span class='highlight'>ponad 500 000</span> bez lagów i podziału na strefy.",
+        low_requirements: "Działa na słabych komputerach i słabym internecie<br>Pełne wsparcie: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Otwarcie już blisko!",
+        join_now: "Subskrybuj i rejestruj się teraz — bądź wśród pierwszych!",
+        register_short: "Rejestracja",
+        telegram_short: "Telegram",
+        discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Wszystkie prawa zastrzeżone"
+      },
+        hi: {
+        title: "Dalam.World",
+        tagline: "एक निर्बाध दुनिया · 500,000+ खिलाड़ी एक साथ · कोई लैग नहीं, कोई ज़ोन नहीं",
+        days: "दिन", hours: "घंटे", minutes: "मिनट", seconds: "सेकंड",
+        register: "फोरम पर रजिस्टर करें", telegram: "टेलीग्राम चैनल", discord: "डिस्कॉर्ड सर्वर",
+        more_than_mmo: "केवल MMO से कहीं अधिक",
+        living_world: "Dalam World एक <span class='highlight'>जीवंत दुनिया</span> है जहाँ खिलाड़ी खुद नियम बनाते हैं।",
+        best_of_mmos: "हमने सभी लोकप्रिय MMO से सर्वश्रेष्ठ लिया — हर कोई यहाँ कुछ परिचित पाएगा।",
+        seamless_world: "<strong>एक विशाल निर्बाध दुनिया</strong><br>सभी खिलाड़ी एक साथ — <span class='highlight'>500,000+</span> बिना लैग या ज़ोन विभाजन के।",
+        low_requirements: "कमज़ोर पीसी और खराब इंटरनेट पर भी चलता है<br>पूर्ण समर्थन: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "उद्घाटन जल्द ही आ रहा है!",
+        join_now: "अभी सब्सक्राइब और रजिस्टर करें — पहले लोगों में शामिल हों!",
+        register_short: "रजिस्टर", telegram_short: "Telegram", discord_short: "Discord",
+        footer: "© 2026 Dalam.World — सर्वाधिकार सुरक्षित"
+      },
+
+      ko: {
+        title: "Dalam.World",
+        tagline: "하나의 원활한 세계 · 500,000+ 플레이어가 함께 · 지연 없음, 존 없음",
+        days: "일", hours: "시간", minutes: "분", seconds: "초",
+        register: "포럼 등록", telegram: "텔레그램 채널", discord: "디스코드 서버",
+        more_than_mmo: "단순 MMO 이상",
+        living_world: "Dalam World는 플레이어가 직접 규칙을 정하는 <span class='highlight'>살아있는 세계</span>입니다.",
+        best_of_mmos: "인기 MMO의 최고만 모았습니다 — 누구나 익숙한 무언가를 찾을 수 있습니다.",
+        seamless_world: "<strong>하나의 거대한 원활한 세계</strong><br>모든 플레이어가 함께 — <span class='highlight'>500,000+</span> 지연이나 존 구분 없이.",
+        low_requirements: "약한 PC와 느린 인터넷에서도 원활<br>완전 지원: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "오픈이 곧 다가옵니다!",
+        join_now: "지금 구독하고 등록하세요 — 가장 먼저 참여하세요!",
+        register_short: "등록", telegram_short: "Telegram", discord_short: "Discord",
+        footer: "© 2026 Dalam.World — 모든 권리 보유"
+      },
+
+      fr: {
+        title: "Dalam.World",
+        tagline: "Un monde fluide · Plus de 500 000 joueurs ensemble · Pas de lag, pas de zones",
+        days: "Jours", hours: "Heures", minutes: "Minutes", seconds: "Secondes",
+        register: "S'inscrire sur le forum", telegram: "Chaîne Telegram", discord: "Serveur Discord",
+        more_than_mmo: "Plus qu'un simple MMO",
+        living_world: "Dalam World est un <span class='highlight'>monde vivant</span> où les joueurs fixent eux-mêmes les règles.",
+        best_of_mmos: "Nous avons pris le meilleur de tous les MMO populaires — chacun y trouvera quelque chose de familier.",
+        seamless_world: "<strong>Un immense monde fluide</strong><br>Tous les joueurs ensemble — <span class='highlight'>500 000+</span> sans lag ni division en zones.",
+        low_requirements: "Fonctionne sur PC faibles et mauvaise connexion<br>Support complet : <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Ouverture imminente !",
+        join_now: "Abonnez-vous et inscrivez-vous maintenant — soyez parmi les premiers !",
+        register_short: "S'inscrire", telegram_short: "Telegram", discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Tous droits réservés"
+      },
+
+      ar: {
+        title: "Dalam.World",
+        tagline: "عالم سلس واحد · أكثر من 500,000 لاعب معًا · بدون تأخير، بدون مناطق",
+        days: "أيام", hours: "ساعات", minutes: "دقائق", seconds: "ثوانٍ",
+        register: "التسجيل في المنتدى", telegram: "قناة تليجرام", discord: "سيرفر ديسكورد",
+        more_than_mmo: "أكثر من مجرد MMO",
+        living_world: "Dalam World هو <span class='highlight'>عالم حي</span> يحدد فيه اللاعبون القواعد بأنفسهم.",
+        best_of_mmos: "أخذنا الأفضل من جميع ألعاب MMO الشهيرة — سيجد الجميع شيئًا مألوفًا هنا.",
+        seamless_world: "<strong>عالم سلس هائل واحد</strong><br>جميع اللاعبين معًا — <span class='highlight'>500,000+</span> بدون تأخير أو تقسيم مناطق.",
+        low_requirements: "يعمل على أجهزة ضعيفة وإنترنت سيء<br>دعم كامل: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "الافتتاح قريب جدًا!",
+        join_now: "اشترك وسجل الآن — كن من الأوائل!",
+        register_short: "تسجيل", telegram_short: "Telegram", discord_short: "Discord",
+        footer: "© 2026 Dalam.World — جميع الحقوق محفوظة"
+      },
+
+      tr: {
+        title: "Dalam.World",
+        tagline: "Tek bir kesintisiz dünya · 500.000+ oyuncu birlikte · Lag yok, bölge yok",
+        days: "Gün", hours: "Saat", minutes: "Dakika", seconds: "Saniye",
+        register: "Foruma Kayıt Ol", telegram: "Telegram Kanalı", discord: "Discord Sunucusu",
+        more_than_mmo: "Sıradan bir MMO'dan çok daha fazlası",
+        living_world: "Dalam World, oyuncuların kendilerinin kuralları belirlediği <span class='highlight'>canlı bir dünya</span>dır.",
+        best_of_mmos: "Tüm popüler MMO'lardan en iyisini aldık — herkes burada tanıdık bir şeyler bulacak.",
+        seamless_world: "<strong>Tek büyük kesintisiz dünya</strong><br>Tüm oyuncular birlikte — <span class='highlight'>500.000+</span> lag veya bölge ayrımı olmadan.",
+        low_requirements: "Zayıf bilgisayarlarda ve kötü internette çalışır<br>Tam destek: <strong>Windows • Linux • macOS</strong>",
+        opening_soon: "Açılış çok yakında!",
+        join_now: "Şimdi abone ol ve kaydol — ilkler arasında ol!",
+        register_short: "Kayıt", telegram_short: "Telegram", discord_short: "Discord",
+        footer: "© 2026 Dalam.World — Tüm hakları saklıdır"
+      },
+        
+        es: {
+    title: "Dalam.World",
+    tagline: "Un mundo sin costuras · Más de 500.000 jugadores juntos · Sin lags, sin zonas",
+    days: "Días",
+    hours: "Horas",
+    minutes: "Minutos",
+    seconds: "Segundos",
+    register: "Registrarse en el foro",
+    telegram: "Canal de Telegram",
+    discord: "Servidor de Discord",
+    more_than_mmo: "Más que solo un MMO",
+    living_world: "Dalam World es un <span class='highlight'>mundo vivo</span> donde los jugadores establecen las reglas.",
+    best_of_mmos: "Tomamos lo mejor de todos los MMOs populares — todos encontrarán algo familiar aquí.",
+    seamless_world: "<strong>Un enorme mundo sin costuras</strong><br>Todos los jugadores juntos — <span class='highlight'>500.000+</span> sin lags ni divisiones de zonas.",
+    low_requirements: "Funciona en PCs débiles y mala conexión<br>Soporte completo: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "¡La apertura está muy cerca!",
+    join_now: "¡Suscríbete y regístrate ahora — sé de los primeros!",
+    register_short: "Registrarse",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Todos los derechos reservados"
+},
+
+it: {
+    title: "Dalam.World",
+    tagline: "Un mondo senza cuciture · Oltre 500.000 giocatori insieme · Senza lag, senza zone",
+    days: "Giorni",
+    hours: "Ore",
+    minutes: "Minuti",
+    seconds: "Secondi",
+    register: "Registrati sul forum",
+    telegram: "Canale Telegram",
+    discord: "Server Discord",
+    more_than_mmo: "Più di un semplice MMO",
+    living_world: "Dalam World è un <span class='highlight'>mondo vivo</span> in cui i giocatori stabiliscono le regole.",
+    best_of_mmos: "Abbiamo preso il meglio da tutti i MMO popolari — tutti troveranno qualcosa di familiare qui.",
+    seamless_world: "<strong>Un enorme mondo senza cuciture</strong><br>Tutti i giocatori insieme — <span class='highlight'>500.000+</span> senza lag o divisioni di zone.",
+    low_requirements: "Funziona su PC deboli e internet scarso<br>Supporto completo: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "L'apertura è imminente!",
+    join_now: "Iscriviti e registrati ora — sii tra i primi!",
+    register_short: "Registrati",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Tutti i diritti riservati"
+},
+
+nl: {
+    title: "Dalam.World",
+    tagline: "Eén naadloze wereld · Meer dan 500.000 spelers samen · Geen lag, geen zones",
+    days: "Dagen",
+    hours: "Uren",
+    minutes: "Minuten",
+    seconds: "Seconden",
+    register: "Registreren op forum",
+    telegram: "Telegram-kanaal",
+    discord: "Discord-server",
+    more_than_mmo: "Meer dan zomaar een MMO",
+    living_world: "Dalam World is een <span class='highlight'>levende wereld</span> waarin spelers zelf de regels bepalen.",
+    best_of_mmos: "We hebben het beste van alle populaire MMO’s genomen — iedereen vindt hier iets vertrouwds.",
+    seamless_world: "<strong>Eén enorme naadloze wereld</strong><br>Alle spelers samen — <span class='highlight'>500.000+</span> zonder lag of zone-verdeling.",
+    low_requirements: "Werkt op zwakke pc’s en slechte internetverbinding<br>Volledige ondersteuning: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Opening komt eraan!",
+    join_now: "Abonneer je nu en registreer — wees er als een van de eersten bij!",
+    register_short: "Registreren",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Alle rechten voorbehouden"
+},
+
+sv: {
+    title: "Dalam.World",
+    tagline: "En sömlös värld · Över 500 000 spelare tillsammans · Ingen lag, inga zoner",
+    days: "Dagar",
+    hours: "Timmar",
+    minutes: "Minuter",
+    seconds: "Sekunder",
+    register: "Registrera dig på forumet",
+    telegram: "Telegram-kanal",
+    discord: "Discord-server",
+    more_than_mmo: "Mer än bara ett MMO",
+    living_world: "Dalam World är en <span class='highlight'>levande värld</span> där spelarna själva sätter reglerna.",
+    best_of_mmos: "Vi har tagit det bästa från alla populära MMO — alla hittar något bekant här.",
+    seamless_world: "<strong>En enorm sömlös värld</strong><br>Alla spelare tillsammans — <span class='highlight'>500 000+</span> utan lag eller zoner.",
+    low_requirements: "Fungerar på svaga datorer och dålig internet<br>Fullt stöd: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Öppning snart!",
+    join_now: "Prenumerera och registrera dig nu — var med bland de första!",
+    register_short: "Registrera",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Alla rättigheter förbehållna"
+},
+
+th: {
+    title: "Dalam.World",
+    tagline: "โลกที่ไร้รอยต่อ · ผู้เล่นมากกว่า 500,000 คนด้วยกัน · ไม่มีแลค ไม่มีโซน",
+    days: "วัน",
+    hours: "ชั่วโมง",
+    minutes: "นาที",
+    seconds: "วินาที",
+    register: "ลงทะเบียนในฟอรัม",
+    telegram: "ช่อง Telegram",
+    discord: "เซิร์ฟเวอร์ Discord",
+    more_than_mmo: "มากกว่าแค่ MMO ธรรมดา",
+    living_world: "Dalam World คือ <span class='highlight'>โลกที่มีชีวิต</span> ที่ผู้เล่นกำหนดกฎเอง",
+    best_of_mmos: "เราเลือกสิ่งที่ดีที่สุดจาก MMO ยอดนิยมทุกเกม — ทุกคนจะพบสิ่งที่คุ้นเคยที่นี่",
+    seamless_world: "<strong>โลกขนาดใหญ่ที่ไร้รอยต่อ</strong><br>ผู้เล่นทุกคนอยู่ด้วยกัน — <span class='highlight'>มากกว่า 500,000</span> โดยไม่มีแลคหรือแบ่งโซน",
+    low_requirements: "เล่นได้แม้คอมสเปคต่ำและเน็ตช้า<br>รองรับเต็มรูปแบบ: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "ใกล้เปิดแล้ว!",
+    join_now: "สมัครสมาชิกและลงทะเบียนตอนนี้ — เป็นหนึ่งในคนแรก!",
+    register_short: "ลงทะเบียน",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — สงวนลิขสิทธิ์ทุกประการ"
+},
+
+ms: {
+    title: "Dalam.World",
+    tagline: "Satu dunia tanpa jahitan · Lebih 500,000 pemain bersama · Tiada lag, tiada zon",
+    days: "Hari",
+    hours: "Jam",
+    minutes: "Minit",
+    seconds: "Saat",
+    register: "Daftar di forum",
+    telegram: "Saluran Telegram",
+    discord: "Pelayan Discord",
+    more_than_mmo: "Lebih daripada sekadar MMO",
+    living_world: "Dalam World ialah <span class='highlight'>dunia hidup</span> di mana pemain menetapkan peraturan sendiri.",
+    best_of_mmos: "Kami ambil yang terbaik dari semua MMO popular — semua orang akan jumpa sesuatu yang biasa di sini.",
+    seamless_world: "<strong>Satu dunia besar tanpa jahitan</strong><br>Semua pemain bersama — <span class='highlight'>500,000+</span> tanpa lag atau pembahagian zon.",
+    low_requirements: "Berjalan pada PC lemah dan internet perlahan<br>Sokongan penuh: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Pembukaan akan datang!",
+    join_now: "Langgan dan daftar sekarang — jadilah antara yang pertama!",
+    register_short: "Daftar",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Semua hak cipta terpelihara"
+},
+
+ro: {
+    title: "Dalam.World",
+    tagline: "O lume fără cusături · Peste 500.000 de jucători împreună · Fără lag, fără zone",
+    days: "Zile",
+    hours: "Ore",
+    minutes: "Minute",
+    seconds: "Secunde",
+    register: "Înregistrează-te pe forum",
+    telegram: "Canal Telegram",
+    discord: "Server Discord",
+    more_than_mmo: "Mai mult decât un simplu MMO",
+    living_world: "Dalam World este o <span class='highlight'>lume vie</span> în care jucătorii stabilesc singuri regulile.",
+    best_of_mmos: "Am luat ce e mai bun din toate MMO-urile populare — toată lumea va găsi ceva familiar aici.",
+    seamless_world: "<strong>O lume uriașă fără cusături</strong><br>Toți jucătorii împreună — <span class='highlight'>peste 500.000</span> fără lag sau zone separate.",
+    low_requirements: "Rulează pe PC-uri slabe și internet prost<br>Suport complet: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Deschiderea e aproape!",
+    join_now: "Abonează-te și înregistrează-te acum — fii printre primii!",
+    register_short: "Înregistrare",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Toate drepturile rezervate"
+},
+
+bg: {
+    title: "Dalam.World",
+    tagline: "Един безшевен свят · Над 500 000 играчи заедно · Без лаг, без зони",
+    days: "Дни",
+    hours: "Часа",
+    minutes: "Минути",
+    seconds: "Секунди",
+    register: "Регистрация във форума",
+    telegram: "Канал в Telegram",
+    discord: "Discord сървър",
+    more_than_mmo: "Повече от просто MMO",
+    living_world: "Dalam World е <span class='highlight'>жив свят</span>, в който играчите сами определят правилата.",
+    best_of_mmos: "Взехме най-доброто от всички популярни MMO — всеки ще намери нещо познато тук.",
+    seamless_world: "<strong>Един огромен безшевен свят</strong><br>Всички играчи заедно — <span class='highlight'>над 500 000</span> без лаг или разделяне на зони.",
+    low_requirements: "Работи на слаби компютри и лош интернет<br>Пълна поддръжка: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Откриването наближава!",
+    join_now: "Абонирай се и се регистрирай сега — бъди сред първите!",
+    register_short: "Регистрация",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Всички права запазени"
+},
+
+cs: {
+    title: "Dalam.World",
+    tagline: "Jeden bezšvový svět · Více než 500 000 hráčů pohromadě · Bez lagů, bez zón",
+    days: "Dny",
+    hours: "Hodiny",
+    minutes: "Minuty",
+    seconds: "Sekundy",
+    register: "Registrace na fóru",
+    telegram: "Telegram kanál",
+    discord: "Discord server",
+    more_than_mmo: "Více než jen MMO",
+    living_world: "Dalam World je <span class='highlight'>živý svět</span>, kde si hráči sami stanovují pravidla.",
+    best_of_mmos: "Vzali jsme to nejlepší ze všech populárních MMO — každý zde najde něco povědomého.",
+    seamless_world: "<strong>Jeden obrovský bezšvový svět</strong><br>Všichni hráči pohromadě — <span class='highlight'>přes 500 000</span> bez lagů a dělení na zóny.",
+    low_requirements: "Běží na slabých PC a špatném internetu<br>Plná podpora: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Otevření se blíží!",
+    join_now: "Přihlaste se a registrujte se teď — buďte mezi prvními!",
+    register_short: "Registrace",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Všechna práva vyhrazena"
+},
+
+ur: {
+    title: "Dalam.World",
+    tagline: "ایک بغیر جوڑ کا دنیا · 500,000+ کھلاڑی ایک ساتھ · کوئی لگ نہیں، کوئی زون نہیں",
+    days: "دن",
+    hours: "گھنٹے",
+    minutes: "منٹ",
+    seconds: "سیکنڈ",
+    register: "فورم پر رجسٹر کریں",
+    telegram: "ٹیلیگرام چینل",
+    discord: "ڈسکورڈ سرور",
+    more_than_mmo: "صرف MMO سے کہیں زیادہ",
+    living_world: "Dalam World ایک <span class='highlight'>زندہ دنیا</span> ہے جہاں کھلاڑی خود قوانین طے کرتے ہیں۔",
+    best_of_mmos: "ہم نے تمام مشہور MMO سے بہترین چیز لی — ہر کوئی یہاں کچھ مانوس پائے گا۔",
+    seamless_world: "<strong>ایک بہت بڑی بغیر جوڑ کی دنیا</strong><br>تمام کھلاڑی ایک ساتھ — <span class='highlight'>500,000+</span> بغیر لگ یا زون کی تقسیم کے۔",
+    low_requirements: "کمزور کمپیوٹر اور خراب انٹرنیٹ پر بھی چلتا ہے<br>مکمل سپورٹ: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "افتتاح بہت جلد!",
+    join_now: "ابھی سبسکرائب کریں اور رجسٹر کریں — پہلوں میں شامل ہوں!",
+    register_short: "رجسٹر",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — تمام حقوق محفوظ"
+},
+
+tl: {
+    title: "Dalam.World",
+    tagline: "Isang walang tahi na mundo · Mahigit 500,000 manlalaro nang sama-sama · Walang lag, walang zone",
+    days: "Araw",
+    hours: "Oras",
+    minutes: "Minuto",
+    seconds: "Segundo",
+    register: "Magrehistro sa forum",
+    telegram: "Telegram Channel",
+    discord: "Discord Server",
+    more_than_mmo: "Higit pa sa ordinaryong MMO",
+    living_world: "Ang Dalam World ay isang <span class='highlight'>buhay na mundo</span> kung saan ang mga manlalaro mismo ang nagtatakda ng rules.",
+    best_of_mmos: "Kinuha namin ang pinakamahusay mula sa lahat ng sikat na MMO — lahat ay makakahanap ng pamilyar dito.",
+    seamless_world: "<strong>Isang malaking walang tahi na mundo</strong><br>Lahat ng manlalaro magkasama — <span class='highlight'>mahigit 500,000</span> walang lag o paghahati ng zone.",
+    low_requirements: "Gumagana kahit sa mahinang PC at mabagal na internet<br>Buong suporta: <strong>Windows • Linux • macOS</strong>",
+    opening_soon: "Malapit nang magbukas!",
+    join_now: "Mag-subscribe at magrehistro na — maging isa sa mga una!",
+    register_short: "Magrehistro",
+    telegram_short: "Telegram",
+    discord_short: "Discord",
+    footer: "© 2026 Dalam.World — Lahat ng karapatan ay nakalaan"
+},
+    };
+
+    // ───────────────────────────────────────────────
+    // Определение языка
+    // ───────────────────────────────────────────────
+    function getUserLanguage() {
+      const lang = (navigator.languages && navigator.languages[0]) ||
+                   navigator.language ||
+                   navigator.userLanguage ||
+                   'en';
+      const short = lang.toLowerCase().split('-')[0];
+      
+      // маппинг для региональных вариантов
+     // if (lang.startsWith('pt')) return 'pt-BR';
+        // Специальные маппинги
+      if (lang.startsWith('zh-tw') || lang.startsWith('zh-hant')) return 'zh-tw';
+      if (lang.startsWith('zh')) return 'zh';
+      if (lang.startsWith('pt')) return 'pt-BR';
+      return short;
+    }
+        
+
+    const currentLang = getUserLanguage();
+    const langData = translations[currentLang] || translations.en;
+
+    // ───────────────────────────────────────────────
+    // Применяем переводы
+    // ───────────────────────────────────────────────
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (langData[key]) {
+        el.innerHTML = langData[key];
+      }
+    });
+
+    // Также меняем lang атрибут html
+    document.documentElement.lang = currentLang;
+
+    // ───────────────────────────────────────────────
+    // Таймер (без изменений)
+    // ───────────────────────────────────────────────
+    const target = new Date("2026-07-16T16:00:00Z").getTime();
+
+    function tick() {
+      const diff = target - Date.now();
+      if (diff < 0) {
+        document.getElementById("countdown").innerHTML = `<h2 style="color:var(--accent);font-size:2.8rem;">${langData.opening_soon || 'Game is already open!'}</h2>`;
+        return;
+      }
+
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      document.getElementById("days").textContent    = d.toString().padStart(2, '0');
+      document.getElementById("hours").textContent   = h.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = m.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = s.toString().padStart(2, '0');
+    }
+
+    tick();
+    setInterval(tick, 980);
+  </script>
+
+</body>
+</html>
